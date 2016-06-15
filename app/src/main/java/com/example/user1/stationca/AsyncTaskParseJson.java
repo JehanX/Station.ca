@@ -83,7 +83,7 @@ public class AsyncTaskParseJson extends AsyncTask<String, String, String> {
             }
 
             JSONArray Menu_JsonArr = null;
-            //Detect if json file has a key named "Menu"
+            //Detect if json file has a key named "Menu" 
             if (json.has("Menu")) {
                 Menu_JsonArr = json.getJSONArray("Menu");
 
@@ -91,6 +91,7 @@ public class AsyncTaskParseJson extends AsyncTask<String, String, String> {
                 for (int i = 0; i < Menu_JsonArr.length(); i++) {
 
                     JSONObject Menu_Name = Menu_JsonArr.getJSONObject(i);
+
 
                     //Used to save information of every single menu.
                     LinkedHashMap<String, String> menu_info = new LinkedHashMap<>();
