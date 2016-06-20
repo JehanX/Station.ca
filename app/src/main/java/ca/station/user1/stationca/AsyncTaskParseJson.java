@@ -1,4 +1,4 @@
-package com.example.user1.stationca;
+package ca.station.user1.stationca;
 
 
 import android.graphics.Bitmap;
@@ -49,7 +49,7 @@ public class AsyncTaskParseJson extends AsyncTask<String, String, String> {
     //The last three integers represent rgb of the secondary color of this site.
     Vector<Integer> Color_List = new Vector<>();
     //Set your json string url here. The only thing you need to change is json URL. Everything will be changed according to Json file.
-    String JsonURL = "http://www.jehanxue.ca/idea/en/station.json";
+    String JsonURL = "http://www.station.ca/en/station.json";
 
     //Actions before doInBackgroud
     @Override
@@ -83,7 +83,7 @@ public class AsyncTaskParseJson extends AsyncTask<String, String, String> {
             }
 
             JSONArray Menu_JsonArr = null;
-            //Detect if json file has a key named "Menu" 
+            //Detect if json file has a key named "Menu"
             if (json.has("Menu")) {
                 Menu_JsonArr = json.getJSONArray("Menu");
 

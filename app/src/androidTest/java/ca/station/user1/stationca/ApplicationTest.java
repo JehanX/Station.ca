@@ -1,4 +1,4 @@
-package com.example.user1.stationca;
+package ca.station.user1.stationca;
 
 import android.app.Application;
 import android.test.ApplicationTestCase;

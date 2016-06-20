@@ -1,16 +1,17 @@
-package com.example.user1.stationca;
+package ca.station.user1.stationca;
 
 import android.content.Context;
 import android.graphics.Color;
 import android.graphics.Typeface;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseExpandableListAdapter;
 import android.widget.ImageView;
-import android.widget.RelativeLayout;
 import android.widget.TextView;
+
+import com.station.user1.stationca.R;
+
 import java.util.LinkedHashMap;
 import java.util.List;
 import java.util.Vector;
