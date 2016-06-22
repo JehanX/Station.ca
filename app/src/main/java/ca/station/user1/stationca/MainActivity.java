@@ -226,7 +226,7 @@ public class MainActivity extends AppCompatActivity {
         //Set menu height
         setListViewHeight(height);
 
-        //Handle collapsing submenu
+        //Handle only one submenu can be open
         Exp_list.setOnGroupExpandListener(new ExpandableListView.OnGroupExpandListener() {
             @Override
             public void onGroupExpand(int groupPosition) {
@@ -235,6 +235,17 @@ public class MainActivity extends AppCompatActivity {
                 }
                 lastExpandedPosition = groupPosition;
 
+            }
+        });
+
+        //Handle close submenu
+        Exp_list.setOnGroupCollapseListener(new ExpandableListView.OnGroupCollapseListener() {
+            public void onGroupCollapse(int groupPosition) {
+                DisplayMetrics displaymetrics = new DisplayMetrics();
+                getWindowManager().getDefaultDisplay().getMetrics(displaymetrics);
+                final int height = displaymetrics.heightPixels;
+                //Set menu height
+                setListViewHeight(height);
             }
         });
 
@@ -265,6 +276,11 @@ public class MainActivity extends AppCompatActivity {
         if (listviewHeight>(2*height/5)) {
             RelativeLayout.LayoutParams params = (RelativeLayout.LayoutParams) Exp_list.getLayoutParams();
             params.height=(2*height/5);
+            Exp_list.setLayoutParams(params);
+        }
+        else {
+            RelativeLayout.LayoutParams params = (RelativeLayout.LayoutParams) Exp_list.getLayoutParams();
+            params.height=listviewHeight;
             Exp_list.setLayoutParams(params);
         }
     }

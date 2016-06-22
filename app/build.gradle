@@ -8,7 +8,7 @@ android {
         applicationId "ca.station.user1.stationca"
         minSdkVersion 21
         targetSdkVersion 23
-        versionCode 2
+        versionCode 3
         versionName "1.2"
     }
     buildTypes {
